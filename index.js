@@ -1,5 +1,6 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
+const axios = require('axios')
 
 inquirer.prompt([
 {
@@ -48,8 +49,12 @@ inquirer.prompt([
   message: 'Enter tests for the project'
 }])
 .then(({username, title, desc, table, install, usage, license, contributing, tests}) => {
-  generateMd(username, title, desc, table, install, usage, license, contributing, tests)
+  axios.get(`https://api.github.com/users/${username}`)
+    .then(({data}) => {
+      generateMd(username, title, desc, table, install, usage, license, contributing, tests)
+    })
 })
+.catch(e => console.error(e))
 
 const generateMd = (username, title, desc, table, install, usage, license, contributing, tests) => {
   fs.writeFile('README.md', `
@@ -76,7 +81,7 @@ ${contributing}
 **Tests**
 ${tests}
 
-* ${username}
+![GitHub avatar](/${data.avatar_url})
 * ${username}
   `, error => error ? console.error(error) : console.log('success'))
 }
