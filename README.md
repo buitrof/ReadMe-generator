@@ -1,27 +1,27 @@
 
-  # ahbag
+# README Generator
 
 **Description**
-sdfgjhd
+This generates READMEs based on user input
 
 **Table of Contents**
-asgjhafg
+1. Description 2. The rest
 
 **Installation**
-afggf
+install it
 
 **Usage**
-afgadfg
+use it to make READMEs
 
 **License**
-aasg
+all rights reserved
 
 **Contributing**
-adfgafg
+me
 
 **Tests**
-adfgfg
+testing
 
-* jxhcvbasf
-* jxhcvbasf
+![GitHub avatar](https://avatars3.githubusercontent.com/u/58494373?v=4)
+* no email available
   

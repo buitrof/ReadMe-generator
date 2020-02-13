@@ -49,16 +49,21 @@ inquirer.prompt([
   message: 'Enter tests for the project'
 }])
 .then(({username, title, desc, table, install, usage, license, contributing, tests}) => {
-  axios.get(`https://api.github.com/users/${username}`)
-    .then(({data}) => {
-      generateMd(username, title, desc, table, install, usage, license, contributing, tests)
+  axios.get(`https://api.github.com/users/buitrof`)
+    .then(({ data }) => {
+      let picture = data.avatar_url
+      let email = data.email
+      if (email === null) {
+        email = 'no email available'
+      }
+      generateMd(username, title, desc, table, install, usage, license, contributing, tests, picture, email)
     })
 })
 .catch(e => console.error(e))
 
-const generateMd = (username, title, desc, table, install, usage, license, contributing, tests) => {
+const generateMd = (username, title, desc, table, install, usage, license, contributing, tests, picture, email) => {
   fs.writeFile('README.md', `
-  # ${title}
+# ${title}
 
 **Description**
 ${desc}
@@ -81,7 +86,7 @@ ${contributing}
 **Tests**
 ${tests}
 
-![GitHub avatar](/${data.avatar_url})
-* ${username}
+![GitHub avatar](${picture})
+* ${email}
   `, error => error ? console.error(error) : console.log('success'))
 }
