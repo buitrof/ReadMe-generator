@@ -18,7 +18,7 @@ Clone this repository to a local directory of your choosing
 In the CLI of the local directory you cloned this application into, type in 'node index.js' and then enter your answers
 
 **License** <br />
-MIT license
+no license
 
 **Contributing** <br />
 Francisco Buitron (me)
