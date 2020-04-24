@@ -20,11 +20,6 @@ inquirer.prompt([
 },
 {
   type: 'input',
-  name: 'table',
-  message: 'Enter a table of contents'
-},
-{
-  type: 'input',
   name: 'install',
   message: 'Enter installation instructions'
 },
@@ -56,12 +51,12 @@ inquirer.prompt([
       if (email === null) {
         email = 'no email available'
       }
-      generateMd(username, title, desc, table, install, usage, license, contributing, tests, picture, email)
+      generateMd(username, title, desc, install, usage, license, contributing, tests, picture, email)
     })
 })
 .catch(e => console.error(e))
 
-const generateMd = (username, title, desc, table, install, usage, license, contributing, tests, picture, email) => {
+const generateMd = (username, title, desc, install, usage, license, contributing, tests, picture, email) => {
   fs.writeFile('README.md', `
 # ${title}
 
@@ -69,7 +64,11 @@ const generateMd = (username, title, desc, table, install, usage, license, contr
 ${desc}
 
 **Table of Contents**
-${table}
+1. Installation
+2. Usage
+3. License
+4. Contributing
+5. Tests
 
 **Installation**
 ${install}
