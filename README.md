@@ -1,26 +1,30 @@
 
 # README Generator
 
-**Description**
-This generates READMEs based on user input
+**Description** <br />
+This is a node application that will generate a README based on the information you enter
 
-**Table of Contents**
-1. Description 2. The rest
+**Table of Contents** <br />
+1. Installation
+2. Usage
+3. License
+4. Contributing
+5. Tests
 
-**Installation**
-install it
+**Installation** <br />
+Clone this repository to a local directory of your choosing
 
-**Usage**
-use it to make READMEs
+**Usage** <br />
+In the CLI of the local directory you cloned this application into, type in 'node index.js' and then enter your answers
 
-**License**
-all rights reserved
+**License** <br />
+MIT license
 
-**Contributing**
-me
+**Contributing** <br />
+Francisco Buitron (me)
 
-**Tests**
-testing
+**Tests** <br />
+N/A
 
 ![GitHub avatar](https://avatars3.githubusercontent.com/u/58494373?v=4)
 * no email available

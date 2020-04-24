@@ -60,29 +60,29 @@ const generateMd = (username, title, desc, install, usage, license, contributing
   fs.writeFile('README.md', `
 # ${title}
 
-**Description**
+**Description** <br />
 ${desc}
 
-**Table of Contents**
+**Table of Contents** <br />
 1. Installation
 2. Usage
 3. License
 4. Contributing
 5. Tests
 
-**Installation**
+**Installation** <br />
 ${install}
 
-**Usage**
+**Usage** <br />
 ${usage}
 
-**License**
+**License** <br />
 ${license}
 
-**Contributing**
+**Contributing** <br />
 ${contributing}
 
-**Tests**
+**Tests** <br />
 ${tests}
 
 ![GitHub avatar](${picture})
